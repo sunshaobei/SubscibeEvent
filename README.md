@@ -9,24 +9,25 @@
  
  
  
- use implementation 'com.github.sunshaobei:SubscibeEvent:1.0.0'
+ # use
+ *implementation 'com.github.sunshaobei:SubscibeEvent:1.0.0'
  
  
- allprojects {
+ *allprojects {
 		repositories {
 			...
 			maven { url 'https://www.jitpack.io' }
 		}
 	}
   
-  whereever you want to subscribe a event :
-  //"event"  method'name of obj
-   SubscribeEvent.getInstance().subscribe("event", obj);
+# whereever you want to subscribe a event :
+  *//"event"  method'name of obj
+ *  SubscribeEvent.getInstance().subscribe("event", obj);
    
    
-   // avoid memory leaks  （activity on destroy）
-   SubscribeEvent.getInstance().removeuObservable("event",obj);
-   
-   // expose a event "event" ->method'name,   args-> method param
-   SubscribeEvent.getInstance().exposeEvent("event",args...);
+   *// avoid memory leaks  （activity on destroy）
+ *  SubscribeEvent.getInstance().removeuObservable("event",obj);
+   # expose a event
+  * //  "event" ->method'name,   args-> method param
+  * SubscribeEvent.getInstance().exposeEvent("event",args...);
   
